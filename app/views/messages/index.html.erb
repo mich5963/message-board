@@ -7,6 +7,9 @@
 			<span class="label label-info col-sm-2"><%= message.name %></span>
 			<div class="col-sm-10">
 			    <%= message.body %>
+			    ( <%= link_to "edit" , edit_message_path(message) %>
+			    <%= link_to "destroy" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
+			    )
 			</div>
 			<!--<br>-->
 		<% end %>
